@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>About - Blog</title>
+    <title>{{ blog.title }} - Blog</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
@@ -12,9 +12,10 @@
     </nav>
     
     <main>
-        <h1>About</h1>
-        <p>A simple blogging platform.</p>
-        <p>Anyone can write and share blogs.</p>
+        <h1>{{ blog.title }}</h1>
+        <p class="author">By: {{ blog.author }}</p>
+        <p class="content">{{ blog.content }}</p>
+        <a href="/" class="back">← Back</a>
     </main>
 </body>
 </html>
